@@ -1,7 +1,15 @@
-<h1> Show for <%= @user.name %> -- user id: <%=@user.id%></h1>
+<h1> Show for <%= @user.name %> - user id: <%=@user.id%></h1>
 
+<h3>Upcoming Events</h3>
 <ul>
-  <% @user.events.each do |event| %>
-    <li><%= event.title %> @ <%= event.location %></li>
+  <% @user.upcoming_events.each do |event| %>
+    <li><%= event.title %> @ <%= event.location %> ( <%= event.date %> )</li>
+  <% end %>
+</ul>
+
+<h3>Previous Events</h3>
+<ul>
+  <% @user.previous_events.each do |event| %>
+    <li><%= event.title %> @ <%= event.location %> ( <%= event.date %> )</li>
   <% end %>
 </ul>
