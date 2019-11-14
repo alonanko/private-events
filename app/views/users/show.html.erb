@@ -1,0 +1,7 @@
+<h1> Show for <%= @user.name %> -- user id: <%=@user.id%></h1>
+
+<ul>
+  <% @user.events.each do |event| %>
+    <li><%= event.title %> @ <%= event.location %></li>
+  <% end %>
+</ul>

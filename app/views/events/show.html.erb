@@ -1,0 +1,2 @@
+<h1><%= @event.title %> </h1>
+<p>created by <%= User.find_by(id: @event.creator_id).name %> <p>

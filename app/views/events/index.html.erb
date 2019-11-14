@@ -1,0 +1,7 @@
+<h1> All Events </h1>
+
+<ul>
+  <% @events.each do |event| %>
+    <li><%= event.title %> @ <%= event.location %> BY <%= User.find_by(id: event.creator_id).name %></li>
+  <% end %>
+<ul>

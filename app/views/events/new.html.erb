@@ -1,0 +1,14 @@
+<h1> Create Event </h1>
+
+<%= form_for @event do |f| %>
+
+  <%= f.label :title %>
+  <%= f.text_field :title, class: 'form-control' %>
+
+  <%= f.label :location %>
+  <%= f.text_field :location, class: 'form-control' %>
+
+  <%= f.submit "Create Event", class: 'btn btn-primary' %>
+
+<% end %>
+
